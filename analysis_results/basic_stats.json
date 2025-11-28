@@ -1,0 +1,76 @@
+{
+  "spiral_galaxies": {
+    "optical_count": 1005,
+    "radio_count": 1002,
+    "radio_png_count": 1001,
+    "complete_pairs": 1002,
+    "catalog_entries": 10000,
+    "optical_size_mb": 69.88062286376953,
+    "radio_size_mb": 2746.9528198242188,
+    "radio_png_size_mb": 430.78014755249023,
+    "total_size_mb": 3247.6135902404785
+  },
+  "elliptical_galaxies": {
+    "optical_count": 1008,
+    "radio_count": 1008,
+    "radio_png_count": 1008,
+    "complete_pairs": 1008,
+    "catalog_entries": 512,
+    "optical_size_mb": 65.2055835723877,
+    "radio_size_mb": 2767.3681640625,
+    "radio_png_size_mb": 227.36182117462158,
+    "total_size_mb": 3059.9355688095093
+  },
+  "starburst_galaxies": {
+    "optical_count": 1000,
+    "radio_count": 1000,
+    "radio_png_count": 1000,
+    "complete_pairs": 1000,
+    "catalog_entries": 3293,
+    "optical_size_mb": 72.84497737884521,
+    "radio_size_mb": 2742.47314453125,
+    "radio_png_size_mb": 438.4073009490967,
+    "total_size_mb": 3253.725422859192
+  },
+  "radio_loud_agn": {
+    "optical_count": 1000,
+    "radio_count": 1000,
+    "radio_png_count": 1000,
+    "complete_pairs": 1000,
+    "catalog_entries": 5000,
+    "optical_size_mb": 73.8573694229126,
+    "radio_size_mb": 2746.2606811523438,
+    "radio_png_size_mb": 420.1853332519531,
+    "total_size_mb": 3240.3033838272095
+  },
+  "fr2_radio_galaxies": {
+    "optical_count": 1000,
+    "radio_count": 1000,
+    "radio_png_count": 1000,
+    "complete_pairs": 1000,
+    "catalog_entries": 4122,
+    "optical_size_mb": 72.4421739578247,
+    "radio_size_mb": 2749.1830444335938,
+    "radio_png_size_mb": 403.5746774673462,
+    "total_size_mb": 3225.1998958587646
+  },
+  "compact_sources": {
+    "optical_count": 1000,
+    "radio_count": 1000,
+    "radio_png_count": 1000,
+    "complete_pairs": 1000,
+    "catalog_entries": 5000,
+    "optical_size_mb": 71.22625637054443,
+    "radio_size_mb": 2749.32861328125,
+    "radio_png_size_mb": 448.3891191482544,
+    "total_size_mb": 3268.943988800049
+  },
+  "TOTAL": {
+    "optical_count": 6013,
+    "radio_count": 6010,
+    "radio_png_count": 6009,
+    "complete_pairs": 6010,
+    "categories": 6,
+    "total_size_gb": 18.843478369526565
+  }
+}

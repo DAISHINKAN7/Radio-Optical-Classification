@@ -1,0 +1,148 @@
+======================================================================
+ASTRONOMICAL DATASET ANALYSIS REPORT
+======================================================================
+
+Generated: 2025-11-25 10:27:05
+Dataset: data\beautiful_dataset_v2
+
+======================================================================
+1. OVERALL STATISTICS
+======================================================================
+Total Categories:      6
+Total Optical Images:  6013
+Total Radio FITS:      6010
+Total Radio PNGs:      6009
+Complete Pairs:        6010
+Total Dataset Size:    18.84 GB
+
+======================================================================
+2. PER-CATEGORY BREAKDOWN
+======================================================================
+
+SPIRAL GALAXIES
+----------------------------------------------------------------------
+  Optical Images:      1005
+  Radio FITS:          1002
+  Radio PNGs:          1001
+  Complete Pairs:      1002
+  Catalog Entries:     10000
+  Size:                3247.6 MB
+  Success Rate:        10.0%
+
+ELLIPTICAL GALAXIES
+----------------------------------------------------------------------
+  Optical Images:      1008
+  Radio FITS:          1008
+  Radio PNGs:          1008
+  Complete Pairs:      1008
+  Catalog Entries:     512
+  Size:                3059.9 MB
+  Success Rate:        196.9%
+
+STARBURST GALAXIES
+----------------------------------------------------------------------
+  Optical Images:      1000
+  Radio FITS:          1000
+  Radio PNGs:          1000
+  Complete Pairs:      1000
+  Catalog Entries:     3293
+  Size:                3253.7 MB
+  Success Rate:        30.4%
+
+RADIO LOUD AGN
+----------------------------------------------------------------------
+  Optical Images:      1000
+  Radio FITS:          1000
+  Radio PNGs:          1000
+  Complete Pairs:      1000
+  Catalog Entries:     5000
+  Size:                3240.3 MB
+  Success Rate:        20.0%
+
+FR2 RADIO GALAXIES
+----------------------------------------------------------------------
+  Optical Images:      1000
+  Radio FITS:          1000
+  Radio PNGs:          1000
+  Complete Pairs:      1000
+  Catalog Entries:     4122
+  Size:                3225.2 MB
+  Success Rate:        24.3%
+
+COMPACT SOURCES
+----------------------------------------------------------------------
+  Optical Images:      1000
+  Radio FITS:          1000
+  Radio PNGs:          1000
+  Complete Pairs:      1000
+  Catalog Entries:     5000
+  Size:                3268.9 MB
+  Success Rate:        20.0%
+
+======================================================================
+3. QUALITY METRICS
+======================================================================
+✓ All images validated during download
+✓ Radio images: Signal-to-noise checked
+✓ Optical images: Brightness and contrast verified
+✓ Complete pairs: Both radio and optical available
+
+======================================================================
+4. FILES GENERATED
+======================================================================
+• basic_stats.json         - Raw statistics in JSON format
+• category_distribution.png - Bar chart of samples per category
+• category_pie.png         - Pie chart of dataset proportions
+• catalog_analysis.png     - Redshift, magnitude, sky coverage plots
+• image_quality.png        - File size and brightness distributions
+• *_sample_grid.png        - Visual samples from each category
+• summary_report.txt       - This report
+
+======================================================================
+5. RECOMMENDATIONS FOR ML
+======================================================================
+✓ EXCELLENT: Dataset size ideal for deep learning!
+  6010 pairs is sufficient for:
+  • CNN training with data augmentation
+  • Multi-modal fusion models (radio + optical)
+  • Transfer learning + fine-tuning
+  • Your Brain2Vision EEG-to-image project!
+
+======================================================================
+6. SUGGESTED TRAIN/VAL/TEST SPLIT
+======================================================================
+Training:        4207 pairs (70%)
+Validation:       901 pairs (15%)
+Test:             902 pairs (15%)
+
+Ensure stratified splitting to maintain class balance!
+Each category should be represented proportionally in all splits.
+
+======================================================================
+7. DATA AUGMENTATION SUGGESTIONS
+======================================================================
+For astronomical images, recommended augmentations:
+  • Rotation: 90°, 180°, 270° (galaxies have no 'up')
+  • Horizontal/Vertical flip
+  • Small random crops (maintain galaxy center)
+  • Brightness/contrast adjustment (±10-20%)
+  • Gaussian noise addition (simulate detector noise)
+  • NO color jittering (preserve astronomical colors!)
+
+======================================================================
+8. NEXT STEPS FOR BRAIN2VISION
+======================================================================
+1. Create train/val/test splits (stratified by category)
+2. Preprocess images:
+   • Normalize optical images (mean=0, std=1)
+   • Normalize radio images separately
+   • Resize to consistent dimensions (e.g., 224x224)
+3. Build multimodal encoder:
+   • Separate encoders for radio + optical
+   • Fusion layer to combine features
+4. Connect to EEG decoder for Brain2Vision
+5. Train with proper validation monitoring
+
+======================================================================
+END OF REPORT
+======================================================================

@@ -1,0 +1,151 @@
+======================================================================
+PREPROCESSING PIPELINE FOR YOUR DATASET
+======================================================================
+
+1. IMAGE LOADING
+----------------------------------------------------------------------
+Optical Images:
+  • Load as RGB (512x512x3)
+  • Convert to float32
+  • Pixel range: [0, 255]
+
+Radio Images (FITS):
+  • Load from FITS files
+  • Extract 2D array (600x600)
+  • Handle NaN values
+  • Convert to float32
+
+2. RESIZING
+----------------------------------------------------------------------
+Recommended target size: 224x224 or 256x256
+
+Option A - 224x224 (Standard for transfer learning):
+  • Optical: Resize from 512x512 to 224x224
+  • Radio: Resize from 600x600 to 224x224
+  • Use: torchvision.transforms.Resize(224)
+
+Option B - 256x256 (Better detail preservation):
+  • Optical: Resize from 512x512 to 256x256
+  • Radio: Resize from 600x600 to 256x256
+  • Use: torchvision.transforms.Resize(256)
+
+3. NORMALIZATION
+----------------------------------------------------------------------
+
+Optical Images:
+  • Mean: 34.15
+  • Std:  16.26
+  • Method: (pixel - mean) / std
+  • Code: transforms.Normalize(mean=[0.1339]*3,
+                               std=[0.0638]*3)
+
+Radio Images:
+  • Mean: 0.000021
+  • Std:  0.000826
+  • Method: (pixel - mean) / std
+  • Handle NaN: Replace with 0 after normalization
+
+4. DATA AUGMENTATION
+----------------------------------------------------------------------
+Training augmentations (apply randomly):
+  • Horizontal flip (p=0.5)
+  • Vertical flip (p=0.5)
+  • Random rotation: ±15 degrees
+  • Random crop: 90% of image, then resize
+  • Brightness adjustment: ±20%
+  • Contrast adjustment: ±20%
+
+DO NOT use:
+  • Color jittering (changes astronomical colors!)
+  • Heavy distortions (unrealistic)
+
+5. EXAMPLE PYTORCH CODE
+----------------------------------------------------------------------
+
+import torch
+from torch.utils.data import Dataset, DataLoader
+from torchvision import transforms
+from PIL import Image
+from astropy.io import fits
+import numpy as np
+
+class GalaxyDataset(Dataset):
+    def __init__(self, file_list, transform=None, augment=False):
+        self.file_list = file_list
+        self.transform = transform
+        self.augment = augment
+        
+    def __len__(self):
+        return len(self.file_list)
+    
+    def __getitem__(self, idx):
+        optical_path, radio_path, label = self.file_list[idx]
+        
+        # Load optical
+        optical = Image.open(optical_path).convert('RGB')
+        optical = optical.resize((256, 256))
+        optical = np.array(optical).astype(np.float32) / 255.0
+        
+        # Load radio
+        with fits.open(radio_path) as hdul:
+            radio = hdul[0].data
+            if radio.ndim == 4:
+                radio = radio[0, 0]
+            elif radio.ndim == 3:
+                radio = radio[0]
+        
+        # Resize radio
+        from scipy.ndimage import zoom
+        zoom_factor = 256 / radio.shape[0]
+        radio = zoom(radio, zoom_factor)
+        radio = np.nan_to_num(radio, nan=0.0)
+        
+        # Normalize
+        optical = (optical - 0.13) / 0.25  # Use your computed values
+        radio = (radio - radio.mean()) / (radio.std() + 1e-8)
+        
+        # Convert to tensors
+        optical = torch.from_numpy(optical).permute(2, 0, 1)  # HWC -> CHW
+        radio = torch.from_numpy(radio).unsqueeze(0)  # Add channel dim
+        
+        return optical, radio, label
+
+# Training transforms
+train_transforms = transforms.Compose([
+    transforms.RandomHorizontalFlip(p=0.5),
+    transforms.RandomVerticalFlip(p=0.5),
+    transforms.RandomRotation(15),
+])
+
+# Create dataloaders
+train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True, num_workers=4)
+val_loader = DataLoader(val_dataset, batch_size=32, shuffle=False, num_workers=4)
+
+
+6. MODEL ARCHITECTURE SUGGESTIONS
+----------------------------------------------------------------------
+For multimodal fusion (radio + optical):
+
+Option A - Separate Encoders:
+  • Optical Encoder: ResNet50/EfficientNet pretrained on ImageNet
+  • Radio Encoder: Custom CNN (3-4 conv layers)
+  • Fusion: Concatenate features -> FC layers
+
+Option B - Late Fusion:
+  • Two separate models, combine predictions
+
+Option C - Cross-Modal Attention:
+  • Attention mechanism between optical and radio features
+
+7. TRAINING TIPS
+----------------------------------------------------------------------
+  • Start with learning rate: 1e-4
+  • Use Adam optimizer
+  • Batch size: 32 (for your 16GB GPU)
+  • Enable mixed precision training (torch.cuda.amp)
+  • Use early stopping (patience=10)
+  • Monitor both train and val loss
+  • Save best model based on val accuracy
+  • Use class weights if imbalanced
+
+======================================================================

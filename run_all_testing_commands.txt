@@ -1,0 +1,17 @@
+:: EfficientNet
+python testing/test_model_multirun.py --model efficientnet --checkpoint outputs/efficientnet/best_model.pth --output_dir outputs/efficientnet_multirun --num_runs 10 --device cuda
+
+:: ConvNeXt
+python testing/test_model_multirun.py --model convnext --checkpoint outputs/convnext/best_model.pth --output_dir outputs/convnext_multirun --num_runs 10 --device cuda
+
+:: ViT
+python testing/test_model_multirun.py --model vit --checkpoint outputs/vit/best_model.pth --output_dir outputs/vit_multirun --num_runs 10 --device cuda
+
+:: ResNet
+python testing/test_model_multirun.py --model resnet --checkpoint outputs/resnet/best_model.pth --output_dir outputs/resnet_multirun --num_runs 10 --device cuda
+
+:: Ensemble
+python testing/test_ensemble_multirun.py --efficientnet_path outputs/efficientnet/best_model.pth --convnext_path outputs/convnext/best_model.pth --output_dir outputs/ensemble_multirun --method weighted --num_runs 10 --device cuda
+
+:: Compare all models
+python testing/compare_models_multirun.py

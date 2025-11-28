@@ -1,0 +1,57 @@
+{
+  "total_pairs": 6010,
+  "corrupted_optical": [],
+  "corrupted_radio": [],
+  "mismatched_pairs": [],
+  "missing_pngs": [],
+  "categories": {
+    "spiral_galaxies": {
+      "total_pairs": 1002,
+      "missing_radio": 3,
+      "missing_optical": 0,
+      "missing_png": 1,
+      "corrupted_optical": 0,
+      "corrupted_radio": 0
+    },
+    "elliptical_galaxies": {
+      "total_pairs": 1008,
+      "missing_radio": 0,
+      "missing_optical": 0,
+      "missing_png": 0,
+      "corrupted_optical": 0,
+      "corrupted_radio": 0
+    },
+    "starburst_galaxies": {
+      "total_pairs": 1000,
+      "missing_radio": 0,
+      "missing_optical": 0,
+      "missing_png": 0,
+      "corrupted_optical": 0,
+      "corrupted_radio": 0
+    },
+    "radio_loud_agn": {
+      "total_pairs": 1000,
+      "missing_radio": 0,
+      "missing_optical": 0,
+      "missing_png": 0,
+      "corrupted_optical": 0,
+      "corrupted_radio": 0
+    },
+    "fr2_radio_galaxies": {
+      "total_pairs": 1000,
+      "missing_radio": 0,
+      "missing_optical": 0,
+      "missing_png": 0,
+      "corrupted_optical": 0,
+      "corrupted_radio": 0
+    },
+    "compact_sources": {
+      "total_pairs": 1000,
+      "missing_radio": 0,
+      "missing_optical": 0,
+      "missing_png": 0,
+      "corrupted_optical": 0,
+      "corrupted_radio": 0
+    }
+  }
+}
