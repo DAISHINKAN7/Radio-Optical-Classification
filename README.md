@@ -2,6 +2,55 @@
   <img src="assets/svg/hero.svg" width="100%" alt="Radio × Optical — Galaxy Morphology Classification"/>
 </p>
 
+<h3 align="center">⚙️ &nbsp;T E C H &nbsp; S T A C K</h3>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python_3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white&labelColor=0A0F20"/>
+  <img src="https://img.shields.io/badge/PyTorch_2.0+-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white&labelColor=0A0F20"/>
+  <img src="https://img.shields.io/badge/torchvision-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white&labelColor=0A0F20"/>
+  <img src="https://img.shields.io/badge/CUDA_·_AMP_FP16-76B900?style=for-the-badge&logo=nvidia&logoColor=white&labelColor=0A0F20"/>
+  <img src="https://img.shields.io/badge/RTX_A4000_16GB-76B900?style=for-the-badge&logo=nvidia&logoColor=white&labelColor=0A0F20"/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white&labelColor=0A0F20"/>
+  <img src="https://img.shields.io/badge/SciPy-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white&labelColor=0A0F20"/>
+  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white&labelColor=0A0F20"/>
+  <img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white&labelColor=0A0F20"/>
+  <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white&labelColor=0A0F20"/>
+  <img src="https://img.shields.io/badge/scikit--image-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white&labelColor=0A0F20"/>
+  <img src="https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&labelColor=0A0F20"/>
+  <img src="https://img.shields.io/badge/seaborn-4C72B0?style=for-the-badge&labelColor=0A0F20"/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/🔭_Astropy-FF6F00?style=for-the-badge&labelColor=0A0F20"/>
+  <img src="https://img.shields.io/badge/🛰️_Astroquery-FF6F00?style=for-the-badge&labelColor=0A0F20"/>
+  <img src="https://img.shields.io/badge/📡_LOFAR_·_LoTSS_DR2-22D3EE?style=for-the-badge&labelColor=0A0F20"/>
+  <img src="https://img.shields.io/badge/🌈_SDSS_DR17-FBBF24?style=for-the-badge&labelColor=0A0F20"/>
+  <img src="https://img.shields.io/badge/🌌_DESI_Legacy_Survey-A78BFA?style=for-the-badge&labelColor=0A0F20"/>
+  <img src="https://img.shields.io/badge/🗂️_VizieR_·_CDS-F472B6?style=for-the-badge&labelColor=0A0F20"/>
+  <img src="https://img.shields.io/badge/FITS-34D399?style=for-the-badge&labelColor=0A0F20"/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/ConvNeXt-1971C2?style=for-the-badge&labelColor=0A0F20"/>
+  <img src="https://img.shields.io/badge/EfficientNet-2B8A3E?style=for-the-badge&labelColor=0A0F20"/>
+  <img src="https://img.shields.io/badge/ResNet-E67700?style=for-the-badge&labelColor=0A0F20"/>
+  <img src="https://img.shields.io/badge/Vision_Transformer-6741D9?style=for-the-badge&labelColor=0A0F20"/>
+  <img src="https://img.shields.io/badge/Pix2Pix_GAN-C2255C?style=for-the-badge&labelColor=0A0F20"/>
+  <img src="https://img.shields.io/badge/Ensemble_Learning-BE185D?style=for-the-badge&labelColor=0A0F20"/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/tqdm-FFC107?style=for-the-badge&labelColor=0A0F20"/>
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white&labelColor=0A0F20"/>
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=0A0F20"/>
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=white&labelColor=0A0F20"/>
+  <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white&labelColor=0A0F20"/>
+  <img src="https://img.shields.io/badge/License_MIT-8397B8?style=for-the-badge&labelColor=0A0F20"/>
+</p>
+
 <p align="center">
   <img src="assets/svg/kpi.svg" width="100%" alt="Key figures"/>
 </p>
